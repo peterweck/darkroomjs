@@ -46,6 +46,9 @@ module.exports = function(grunt) {
       main: {
         options: {
           mangle: false,
+          compress: false,
+          beautify: true,
+          preserveComments: 'all',
           sourceMap: 'build/js/darkroom.min.js.map',
           sourceMappingURL: 'darkroom.min.js.map'
         },
@@ -65,7 +68,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed',
+          style: 'expanded', // 'compressed',
           sourcemap: true
         },
         files: {
